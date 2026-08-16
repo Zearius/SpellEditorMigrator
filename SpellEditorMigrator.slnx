@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SpellMigration.Core/SpellMigration.Core.csproj" />
+  <Project Path="SpellMigration.UI/SpellMigration.UI.csproj" />
+</Solution>
