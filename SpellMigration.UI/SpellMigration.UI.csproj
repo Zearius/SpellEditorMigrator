@@ -7,6 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Assets\worldserver.ico</ApplicationIcon>
+    <AssemblyName>SpellEditorMigrationTool</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
