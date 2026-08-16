@@ -1,0 +1,95 @@
+﻿<Window x:Class="SpellMigration.UI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="Assets/worldserver.ico"
+        Title="Connection Settings" Height="553" Width="480"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Configure both database connections."
+                   TextWrapping="Wrap" Margin="0,0,0,12"/>
+
+        <GroupBox Grid.Row="1" Header="SpellEditor Source Database" Margin="0,0,0,12">
+            <Grid Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Server:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="0" Grid.Column="1" Name="SeServerBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Port:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="1" Grid.Column="1" Name="SePortBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Database:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="2" Grid.Column="1" Name="SeDatabaseBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Table name:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="3" Grid.Column="1" Name="SeTableBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Username:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="4" Grid.Column="1" Name="SeUserBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Password:" VerticalAlignment="Center"/>
+                <PasswordBox Grid.Row="5" Grid.Column="1" Name="SePasswordBox" Margin="0,4"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="2" Header="AzerothCore World Database" Margin="0,0,0,12">
+            <Grid Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Server:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="0" Grid.Column="1" Name="AcServerBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Port:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="1" Grid.Column="1" Name="AcPortBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Database:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="2" Grid.Column="1" Name="AcDatabaseBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Table name:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="3" Grid.Column="1" Name="AcTableBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Username:" VerticalAlignment="Center"/>
+                <TextBox   Grid.Row="4" Grid.Column="1" Name="AcUserBox" Margin="0,4"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Password:" VerticalAlignment="Center"/>
+                <PasswordBox Grid.Row="5" Grid.Column="1" Name="AcPasswordBox" Margin="0,4"/>
+            </Grid>
+        </GroupBox>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Name="StatusText" VerticalAlignment="Center" Margin="0,0,12,0" Foreground="Gray"/>
+            <Button Content="Test SpellEditor" Padding="8,4" Margin="0,0,8,0" Click="TestSpellEditor_Click"/>
+            <Button Content="Test AzerothCore" Padding="8,4" Margin="0,0,8,0" Click="TestAcoreWorld_Click"/>
+            <Button Content="Save" Padding="16,4" Click="Save_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
