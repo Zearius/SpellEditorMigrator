@@ -147,6 +147,8 @@ the AzerothCore spell system is large — if you find a spell type that maps
 incorrectly, please open an issue with the SpellEditor export and the
 generated output so it can be reproduced.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details before opening a PR.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
